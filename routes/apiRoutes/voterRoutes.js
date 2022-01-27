@@ -81,6 +81,7 @@ router.put('/voter/:id',(req, res) =>{
 
 router.delete('/voter/:id', (req,res)=>{
     const sql = `DELETE FROM voters WHERE id =?`;
+    
     const params = [req.params.id];
     db.query(sql,params, (err, result)=>{
         if (err){
